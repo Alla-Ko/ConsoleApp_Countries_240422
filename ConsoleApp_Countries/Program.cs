@@ -184,7 +184,7 @@ namespace ConsoleApp_Countries
             Console.WriteLine("\x1b[43m\x1b[30mПоказати Топ-5 країни за кількістю жителів\x1b[37m\x1b[40m");
             Console.ReadKey();
             Console.WriteLine();
-            var top5CountriesByInhabitans = countries.OrderByDescending(country => country.Area)
+            var top5CountriesByInhabitans = countries.OrderByDescending(country => country.Inhabitants)
                 .Select(country => $"{country.Name} - {country.Inhabitants}")
                 .Take(5);
             top5CountriesByInhabitans.ToList().ForEach(Console.WriteLine);
